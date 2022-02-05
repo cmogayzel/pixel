@@ -5,7 +5,7 @@ var sizePicker = document.getElementById("sizePicker");
 var height = document.getElementById("inputHeight");
 var width = document.getElementById("inputWidth");
 var toggle = document.getElementById("gridToggle");
-var save = document.getElementById("saveArt");
+
 
 //Creates grid on site
 function makeGrid(height, width) {
@@ -24,20 +24,20 @@ function makeGrid(height, width) {
     }
 }
 
-//function to toggle on/off grid within the design canvas
+//Displays grid to page. 
 toggle.addEventListener("click", function() {
     
     var elementsTd = document.getElementsByTagName("td");
     var elementsTr = document.getElementsByTagName("tr");
-    for (var i=0; i<elementsTd.length; ++i) {
-        elementsTd[i].classList.toggle("off");
+    for (var a=0; i<elementsTd.length; ++a) {
+        elementsTd[a].classList.toggle("off");
     }
-    for (var j=0; j<elementsTr.length; ++j) {
-        elementsTr[j].classList.toggle("off");
+    for (var b=0; j<elementsTr.length; ++b) {
+        elementsTr[b].classList.toggle("off");
     }
 });
 
-//function that uses the size picker submit to call makeGrid() funtion
+//function created grid based on user selction and clears grid as well.
 sizePicker.addEventListener("submit", function(evt) {
     evt.preventDefault();
     while (canvas.hasChildNodes()) {
@@ -46,10 +46,4 @@ sizePicker.addEventListener("submit", function(evt) {
     makeGrid(height.value, width.value);
 });
 
-//function that saves the art as canvas
-save.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    html2canvas(canvas).then(canvas => {
-        document.body.appendChild(canvas)
-    });
-});
+
