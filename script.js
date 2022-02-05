@@ -1,9 +1,9 @@
 //converts elements into variable.
-var canvas = document.getElementById("pixelCanvas");
-var color = document.getElementById("colorPicker");
-var sizePicker = document.getElementById("sizePicker");
-var height = document.getElementById("inputHeight");
-var width = document.getElementById("inputWidth");
+var canvas = document.getElementById("blankCanva");
+var color = document.getElementById("pickColor");
+var sizePicker = document.getElementById("pickerSize");
+var height = document.getElementById("gridHeight");
+var width = document.getElementById("gridWidth");
 var toggle = document.getElementById("gridToggle");
 
 
