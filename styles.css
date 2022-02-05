@@ -8,3 +8,34 @@ h1 {
     margin: 0.2em;
 
 }
+
+h2 {
+    margin: 1em 0.15em 0.25em
+}
+
+h2:first-of-type {
+    margin-top: 0.55em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+}
